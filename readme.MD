@@ -2,7 +2,7 @@
 
 > If it can be done in bash, it can be automated.
 
-These are some of the bash terminal commands I created and use everyday to automate many of the commands and to make programming more fun and accessible. Hopefully these commands are useful to you.
+These are some of the bash terminal commands I created and use everyday to automate my workflow and to make programming more fun and accessible. Hopefully these commands are useful to you.
 ## Features
 
 - Automating daily simple commands as "cdi"=> mkdir + cd into a project.
