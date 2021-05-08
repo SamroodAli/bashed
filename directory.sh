@@ -13,3 +13,8 @@ function cdb() {
     done
   cd $path
 }
+
+#function to go the source of a program, goto node will take you where nodejs is installed, goto code for vs code  etc
+function goto(){
+  cd $(dirname $(which $1));
+}
