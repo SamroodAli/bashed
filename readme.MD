@@ -5,11 +5,13 @@
 These are some of the bash terminal commands I created and use everyday to automate my workflow and to make programming more fun and accessible. Hopefully these commands are useful to you.
 ## Features
 
-- Automating daily simple commands as "cdi"=> mkdir + cd into a project.
-- Project specific commands, eg: "repo" => Opens the current project git repo ing default browser.
-- Git commands such as gim which provides feature headings you set to all your commit messages, you can check this project commit messages.
-- Bash commands such as "reload", no longer do you need to closer and open your terminal again to run updated bashrc file.
-- Network commands such as "port", "port 5000" would open localhost:5000 in your default browser.
+- Automating daily simple commands:
+ eg: `cdi` which creates a folder and change directory to it. (mkdir + cd into a folder)
+- Project specific commands
+eg: `repo` => Opens the current project git repo n your default browser.
+- Git commands such as `gim` which provides feature headings you set to all your commit messages, you can check this project commit messages.
+- Bash commands such as `reload`, no longer do you need to closer and open your terminal again to run updated bashrc file.
+- Network commands such as `port`, `port 5000` would open localhost:5000 in your default browser.
 - Constant updates as I need and use these every day : )
 
 ## Tech
