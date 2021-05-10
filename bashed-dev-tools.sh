@@ -4,6 +4,7 @@ function build(){
   for file in *; do
    if [[ $file == *.sh  ]] 
    then
+    cat $(basename $file) >> bashed.sh
     cat $file >> bashed.sh
    fi
   done
