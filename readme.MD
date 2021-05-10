@@ -35,33 +35,29 @@ $ sudo apt install curl
 ### Installation
 Copy paste these commands in your terminal
 
-cd into root folder.
+Step 1: cd into root folder.
 
 ```sh
 cd
 ```
-get script file.
+Step 2: get script file.
 
 ```
 curl -o bashed.sh https://raw.githubusercontent.com/SamroodAli/bashed/main/bashed.sh
 ```
-Tell bash to use the script file.
+Step 3: Tell bash to use the script file., make sure you in root folder(step 1)
 
 ```sh
 echo 'source bashed.sh' >> .bashrc
 ```
-## Categories
+## Commands
 
-### Browser and Network
-| Command | What it does |
-| ------ | ------ |
-| Bash | [github/bash.sh][PlGh] |
-| Browser and Network | [github/browser-and-network.sh][PlGh] |
-| Directory | [github/browser-and-network.sh][PlGh]|
-| Git and Github | [github/directory.sh][PlGh] |
-| Network |[github/git.sh][PlGh] |
-| Ruby on Rails |[github/rails.sh][PlGh] |
-
+### Browser
+| Command |Example | What it does |
+| ------ | ------ | ------ |
+|browser | browser | open your default browser|
+|Kill-port|kill-port 3000| Kills all processes listening at a port|
+|port|port 3000| open localhost:3000 in your default browser|
 ## Development
 Want to contribute? Great!
 Open your favorite Terminal and run these commands.
