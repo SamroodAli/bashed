@@ -39,14 +39,16 @@ for others, please refer this:
 [Documentation for installing curl](https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux)
 
 
-#### If  you cannot install or do not prefer installing curl
-You can manually download the `bashed.sh` file from this repo and move it to the root directory (which is step 1 below), if you do not prefer installing curl, this would replace steps 1 and 2 below
+### If  you cannot install or do not prefer installing curl
+You can manually download the `bashed.sh` file from this repo and move it to the root directory (which is step 1 below), if you do not prefer installing curl, this would replace steps 1 and 2 below in installation
 
+In Ubuntu, assuming the default directories, this should work after you download the bashed.sh file from the repo.
 ```
 cd
 cd Downloads
 mv bashed.sh ~/
 ```
+follow steps 3 and 4 below
 ### Installation
 Copy paste these commands in your terminal
 
