@@ -43,3 +43,7 @@ function gim(){
       *)  message=$@;gia "${feat}:${message^}";;
   esac
 } 
+
+function gp(){
+  git push -u $@
+}
