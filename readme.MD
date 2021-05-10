@@ -8,9 +8,9 @@ These are some of the bash terminal commands I created and use everyday to autom
 - Automating daily simple commands:
  eg: `cdi` which creates a folder and change directory to it. (mkdir + cd into a folder)
 - Project specific commands
-eg: `repo` => Opens the current project git repo n your default browser.
+eg: `repo` Opens the current project git repository n your default browser.
 - Git commands such as `gim` which provides feature headings you set to all your commit messages, you can check this project commit messages.
-- Bash commands such as `reload`, no longer do you need to closer and open your terminal again to run updated bashrc file.
+- Bash commands such as `reload`, no longer do you need to close and open your terminal again to run updated bashrc file.
 - Network commands such as `port`, `port 5000` would open localhost:5000 in your default browser.
 - Constant updates as I need and use these every day : )
 
@@ -23,9 +23,9 @@ eg: `repo` => Opens the current project git repo n your default browser.
 
 Install 'curl' if you don't have it
 
-[Documentation for installing curl](https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux)
 
-for ubuntu users it is:(without the $)
+For ubuntu users:
+(without the $)
 ```sh
 #update the system commands, not always necessary but recommended
 $ sudo apt update
@@ -33,6 +33,19 @@ $ sudo apt upgrade
 
 #install curl
 $ sudo apt install curl
+```
+
+for others, please refer this:
+[Documentation for installing curl](https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux)
+
+
+#### If  you cannot install or do not prefer installing curl
+You can manually download the `bashed.sh` file from this repo and move it to the root directory (which is step 1 below), if you do not prefer installing curl, this would replace steps 1 and 2 below
+
+```
+cd
+cd Downloads
+mv bashed.sh ~/
 ```
 ### Installation
 Copy paste these commands in your terminal
@@ -47,6 +60,8 @@ Step 2: get script file.
 ```
 curl -o bashed.sh https://raw.githubusercontent.com/SamroodAli/bashed/main/bashed.sh
 ```
+
+
 Step 3: Tell bash to use the script file., make sure you in root folder(step 1)
 
 ```sh
@@ -82,12 +97,14 @@ reload
 
 
 ### Git commands
+Use these only after you are familiar with git commands, highly recommend that you learn them, these commands should not stop you from learning proper git commands.
+
 | Command |Example | What it does |
 | ------ | ------ | ------ |
 |repo|repo|Open current project repo in your browser|
 |gia|gia hello world|git add all files and commit,message is everything after the `gia` keyword, no need for quotes to the message. |
 |gim|gim hello world|awesome automated git commit messages,look at this project commits, seperate documentation below |
-|gp|gp|git push -u command|
+|gp|gp|`git push -u command`, although it takes in optional arguments and workds,exg: `gp origin development`, but `git push` would be faster with tab completion, I use it for pushing current branch with just `gp`|
 
 
 ### Bash dev tools
