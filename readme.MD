@@ -16,14 +16,40 @@ These are some of the bash terminal commands I created and use everyday to autom
 - [Bash] - All shell scripts are for bash, I havent tried or tested in other shells!
 
 ## Installation
-Coming soon
-I will automate it, dont worry, hopefully you will  only need to copy, paste a single command.
-```sh
-Installation template
-thank you for  checking out this project
-Happy programming
-```
 
+### Prerequisites
+
+Install 'curl' if you don't have it
+
+[Documentation for installing curl](https://help.ubidots.com/en/articles/2165289-learn-how-to-install-run-curl-on-windows-macosx-linux)
+
+for ubuntu users it is:(without the $)
+```sh
+#update the system commands, not always necessary but recommended
+$ sudo apt update
+$ sudo apt upgrade
+
+#install curl
+$ sudo apt install curl
+```
+### Installation
+Copy paste these commands in your terminal
+
+cd into root folder.
+
+```sh
+cd;
+```
+get script file.
+
+```
+curl -o bashed.sh https://raw.githubusercontent.com/SamroodAli/bashed/main/bashed.sh
+```
+Tell bash to use the script file.
+
+```sh
+echo 'source bashed.sh' >> .bashrc
+```
 ## Categories
 
 ### Browser and Network
