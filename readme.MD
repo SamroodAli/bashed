@@ -6,7 +6,7 @@ These are some of the bash terminal commands I created and use everyday to autom
 ## Features
 
 - Automating daily simple commands as "cdi"=> mkdir + cd into a project.
-- Project specific commands, eg: "repo" => Opens the current project git repo in default browser.
+- Project specific commands, eg: "repo" => Opens the current project git repo ing default browser.
 - Git commands such as gim which provides feature headings you set to all your commit messages, you can check this project commit messages.
 - Bash commands such as "reload", no longer do you need to closer and open your terminal again to run updated bashrc file.
 - Network commands such as "port", "port 5000" would open localhost:5000 in your default browser.

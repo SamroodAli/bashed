@@ -28,3 +28,7 @@ function bashed(){
   # unset feat;
   # cd $current_path;
 }
+
+function bashrc(){
+  sensible-editor ~/.bashrc
+}
