@@ -93,7 +93,7 @@ reload
 |reload|reload|reload bashrc file, can almost always replace restarting your terminal|
 |bashed|bashed|back up your bashrc file(beta)|
 |build|build|Only to be used in this project repo or clone, takes all the script files in this project and builds a final production ready script file. Thinking of contributions or adding more personal ones,this can be useful.
-
+|bashrc|bashrc|Opens bashrc config file|
 ### Ruby on rails (will be seperated later)
 | Command |Example | What it does |
 | ------ | ------ | ------ |
