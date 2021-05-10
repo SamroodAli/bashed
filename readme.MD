@@ -87,6 +87,7 @@ reload
 |repo|repo|Open current project repo in your browser|
 |gia|gia hello world|git add all files and commit,message is everything after the `gia` keyword, no need for quotes to the message. |
 |gim|gim hello world|awesome automated git commit messages,look at this project commits, seperate documentation below |
+|gp|gp|git push -u command|
 
 
 ### Bash dev tools

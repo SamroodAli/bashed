@@ -45,5 +45,5 @@ function gim(){
 } 
 
 function gp(){
-  git push -u $@
+  git push -u $1 $2
 }
