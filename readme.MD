@@ -40,15 +40,19 @@ for others, please refer this:
 
 
 ### If  you cannot install or do not prefer installing curl
-You can manually download the `bashed.sh` file from this repo and move it to the root directory (which is step 1 below), if you do not prefer installing curl, this would replace steps 1 and 2 below in installation
+You can manually download the `bashed.sh` file from this repo and move it to the root directory (commands below), if you do not prefer installing curl, this would replace steps 1 and 2 below in installation
 
-In Ubuntu, assuming the default directories, this should work after you download the bashed.sh file from the repo.
+The steps to do so in terminal ( tested in mac and ubuntu), assuming the default directories, after you downloaded the bashed.sh file from the repo.
 ```
-cd
-cd Downloads
+# Change to downloads folder
+
+cd ~/Downloads
+
+# Move the file to root directory
+
 mv bashed.sh ~/
 ```
-follow steps 3 and 4 below
+Follow steps 3 and 4 below in installation.
 ### Installation
 Copy paste these commands in your terminal
 
