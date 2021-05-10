@@ -38,7 +38,7 @@ Copy paste these commands in your terminal
 cd into root folder.
 
 ```sh
-cd;
+cd
 ```
 get script file.
 
