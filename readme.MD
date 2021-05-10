@@ -17,7 +17,7 @@ eg: `repo` Opens the current project git repository n your default browser.
 ## Tech
 - [Bash] - All shell scripts are for bash, I havent tried or tested in other shells!
 
-## Installation
+# Installation
 
 ### Prerequisites
 
