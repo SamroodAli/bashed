@@ -68,6 +68,18 @@ echo 'source bashed.sh' >> .bashrc
 |cdb|cdb 3|cd back custom times|
 |goto|goto node|go to where program is installed|
 
+
+### Git commands
+| Command |Example | What it does |
+| ------ | ------ | ------ |
+|repo|repo|Open current project repo in your browser|
+|gia|gia hello world|git add all files and commit,message is everything after the `gia` keyword, no need for quotes to the message. |
+|gim|gim hello world|awesome automated git commit messages,look at this project commits, seperate documentation below |
+
+### Ruby on rails (will be seperated later)
+| Command |Example | What it does |
+| ------ | ------ | ------ |
+|routes|routes user|Rails routes filtered to one keyword, no more browsing through a long list of rails routes|
 ## Development
 Want to contribute? Great!
 Open your favorite Terminal and run these commands.
