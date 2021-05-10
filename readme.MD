@@ -50,6 +50,16 @@ Step 3: Tell bash to use the script file., make sure you in root folder(step 1)
 ```sh
 echo 'source bashed.sh' >> .bashrc
 ```
+Step4:
+If you do not have this project,
+
+`Exit and reload your terminal`
+
+Elseif existing user:
+```sh
+reload
+```
+##### Thank you for using my project
 ## Commands
 
 ### Browser
@@ -75,6 +85,14 @@ echo 'source bashed.sh' >> .bashrc
 |repo|repo|Open current project repo in your browser|
 |gia|gia hello world|git add all files and commit,message is everything after the `gia` keyword, no need for quotes to the message. |
 |gim|gim hello world|awesome automated git commit messages,look at this project commits, seperate documentation below |
+
+
+### Bash dev tools
+| Command |Example | What it does |
+| ------ | ------ | ------ |
+|reload|reload|reload bashrc file, can almost always replace restarting your terminal|
+|bashed|bashed|back up your bashrc file(beta)|
+|build|build|Only to be used in this project repo or clone, takes all the script files in this project and builds a final production ready script file. Thinking of contributions or adding more personal ones,this can be useful.
 
 ### Ruby on rails (will be seperated later)
 | Command |Example | What it does |
