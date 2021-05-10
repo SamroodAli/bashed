@@ -58,6 +58,16 @@ echo 'source bashed.sh' >> .bashrc
 |browser | browser | open your default browser|
 |Kill-port|kill-port 3000| Kills all processes listening at a port|
 |port|port 3000| open localhost:3000 in your default browser|
+
+
+### Directory and file commands
+| Command |Example | What it does |
+| ------ | ------ | ------ |
+|cdi|cdi project|make a directory and cd into it|
+|cdbb|cdbb|cd back 2 times|
+|cdb|cdb 3|cd back custom times|
+|goto|goto node|go to where program is installed|
+
 ## Development
 Want to contribute? Great!
 Open your favorite Terminal and run these commands.
