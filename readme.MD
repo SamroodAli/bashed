@@ -17,8 +17,6 @@ eg: `repo` Opens the current project git repository n your default browser.
 ## Tech
 - [Bash] - All shell scripts are for bash, I havent tried or tested in other shells!
 
-# Installation
-
 ### Prerequisites
 
 Install 'curl' if you don't have it
@@ -53,7 +51,7 @@ cd ~/Downloads
 mv bashed.sh ~/
 ```
 Follow steps 3 and 4 below in installation.
-### Installation
+# Installation
 Copy paste these commands in your terminal
 
 Step 1: cd into root folder.
