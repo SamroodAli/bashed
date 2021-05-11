@@ -18,3 +18,8 @@ function cdb() {
 function goto(){
   cd $(dirname $(which $1));
 }
+
+#function to search with filter
+function lg(){
+  ls | grep "$@"
+}
