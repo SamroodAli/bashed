@@ -28,6 +28,10 @@ function bashed(){
   # unset feat;
   # cd $current_path;
 }
+
+function bashrc(){
+  sensible-editor ~/.bashrc
+}
 # Takes all bash scripts and creates a final production ready bashscript file
 function build(){
   rm bashed.sh
@@ -58,6 +62,10 @@ function bashed(){
   # unset feat;
   # cd $current_path;
 }
+
+function bashrc(){
+  sensible-editor ~/.bashrc
+}
 #open default browser
 function browser(){
   sensible-browser $@
@@ -69,13 +77,13 @@ function kill-port(){
   kill -9 $(lsof -t -i:$1) 
 }
 
-#open localhost in browser with default port set as 3000
+
 default_port=3000
 function port(){
   if [ -z "$1" ]; then
-    sensible-browser http://192.168.100.175:$default_port
+    sensible-browser http://localhost:$default_port
   else
-    sensible-browser http://192.168.100.175:$1
+    sensible-browser http://localhost:$1
   fi
 }
 #open default browser
@@ -89,13 +97,13 @@ function kill-port(){
   kill -9 $(lsof -t -i:$1) 
 }
 
-#open localhost in browser with default port set as 3000
+
 default_port=3000
 function port(){
   if [ -z "$1" ]; then
-    sensible-browser http://192.168.100.175:$default_port
+    sensible-browser http://localhost:$default_port
   else
-    sensible-browser http://192.168.100.175:$1
+    sensible-browser http://localhost:$1
   fi
 }
 #mkdir a folder and cd into it
@@ -117,123 +125,140 @@ function cdb() {
 #function to go the source of a program, goto node will take you where nodejs is installed, goto code for vs code  etc
 function goto(){
   cd $(dirname $(which $1));
-}
-#mkdir a folder and cd into it
-function cdi() {
-    mkdir $1
-    cd $1
-}
-
-# cd back, optional argument :cd back number of times
-function cdb() {
-  path=''
-  for i in $(eval echo {1..$1})
-    do 
-      path+='../'
-    done
-  cd $path
-}
-
-#function to go the source of a program, goto node will take you where nodejs is installed, goto code for vs code  etc
-function goto(){
-  cd $(dirname $(which $1));
-}
-#repo , opens up current repository in your default browser
-function repo() {
-    local=$(git config --get remote.origin.url)
-    sensible-browser $local || open $local || xdg-open $local
-}
-
-# git add and commit
-function gia(){
-  git add . #comment this line if you dont want to add all files
-  git commit -m "${@}"
-  echo $@
-}
-
-# Set default for new terminal sessions, deleting any old value
-feat="Feat"
-set current feat
-function feat(){
-  feat=${1^}
-  echo  "Set feature: $feat"
-}
-# View current feature
-alias feat?='echo $feat'
-
-# Commit with beautiful messages with feature headings prepended
-function gim(){
-  local message=${@:2}
-  case $1 in
-    "a")  gia "Asset:${message^}" ;;
-    "x")  gia "Fix:${message^}" ;;
-    "d")  gia "Docs:${message^}" ;;
-    "s")  gia "Style:${message^}" ;;
-    "r")  gia "Refactor:${message^}" ;;
-    "t")  gia "Test:${message^}" ;;
-    "c")  gia "Config:${message^}" ;;
-    "i")  gia "Init:${message^}" ;;
-    "o")  local message=${@:3};gia "${2^}:${message^}";;
-    "M")  gia "Model:${message^}" ;;
-    "V")  gia "View:${message^}" ;;
-    "C")  gia "Controller:${message^}" ;;
-    "f")  feat $2;
-          message=${@:3}
-          gia "$feat:${message^}";;
-      *)  message=$@;gia "${feat}:${message^}";;
-  esac
-} 
-#repo , opens up current repository in your default browser
-function repo() {
-    local=$(git config --get remote.origin.url)
-    sensible-browser $local || open $local || xdg-open $local
-}
-
-# git add and commit
-function gia(){
-  git add . #comment this line if you dont want to add all files
-  git commit -m "${@}"
-  echo $@
-}
-
-# Set default for new terminal sessions, deleting any old value
-feat="Feat"
-set current feat
-function feat(){
-  feat=${1^}
-  echo  "Set feature: $feat"
-}
-# View current feature
-alias feat?='echo $feat'
-
-# Commit with beautiful messages with feature headings prepended
-function gim(){
-  local message=${@:2}
-  case $1 in
-    "a")  gia "Asset:${message^}" ;;
-    "x")  gia "Fix:${message^}" ;;
-    "d")  gia "Docs:${message^}" ;;
-    "s")  gia "Style:${message^}" ;;
-    "r")  gia "Refactor:${message^}" ;;
-    "t")  gia "Test:${message^}" ;;
-    "c")  gia "Config:${message^}" ;;
-    "i")  gia "Init:${message^}" ;;
-    "o")  local message=${@:3};gia "${2^}:${message^}";;
-    "M")  gia "Model:${message^}" ;;
-    "V")  gia "View:${message^}" ;;
-    "C")  gia "Controller:${message^}" ;;
-    "f")  feat $2;
-          message=${@:3}
-          gia "$feat:${message^}";;
-      *)  message=$@;gia "${feat}:${message^}";;
-  esac
-} 
-# rails routes with filter using grep,exg routes user
-function routes(){
-  rails routes | grep "$1"
 }
 
 #function to search with filter
 function lg(){
   ls | grep "$@"
+}
+#mkdir a folder and cd into it
+function cdi() {
+    mkdir $1
+    cd $1
+}
+
+# cd back, optional argument :cd back number of times
+function cdb() {
+  path=''
+  for i in $(eval echo {1..$1})
+    do 
+      path+='../'
+    done
+  cd $path
+}
+
+#function to go the source of a program, goto node will take you where nodejs is installed, goto code for vs code  etc
+function goto(){
+  cd $(dirname $(which $1));
+}
+
+#function to search with filter
+function lg(){
+  ls | grep "$@"
+}
+#repo , opens up current repository in your default browser
+function repo() {
+    local=$(git config --get remote.origin.url)
+    sensible-browser $local || open $local || xdg-open $local
+}
+
+# git add and commit
+function gia(){
+  git add . #comment this line if you dont want to add all files
+  git commit -m "${@}"
+  echo $@
+}
+
+# Set default for new terminal sessions, deleting any old value
+feat="Feat"
+set current feat
+function feat(){
+  feat=${1^}
+  echo  "Set feature: $feat"
+}
+# View current feature
+alias feat?='echo $feat'
+
+# Commit with beautiful messages with feature headings prepended
+function gim(){
+  local message=${@:2}
+  case $1 in
+    "a")  gia "Asset:${message^}" ;;
+    "x")  gia "Fix:${message^}" ;;
+    "d")  gia "Docs:${message^}" ;;
+    "s")  gia "Style:${message^}" ;;
+    "r")  gia "Refactor:${message^}" ;;
+    "t")  gia "Test:${message^}" ;;
+    "c")  gia "Config:${message^}" ;;
+    "i")  gia "Init:${message^}" ;;
+    "o")  local message=${@:3};gia "${2^}:${message^}";;
+    "M")  gia "Model:${message^}" ;;
+    "V")  gia "View:${message^}" ;;
+    "C")  gia "Controller:${message^}" ;;
+    "f")  feat $2;
+          message=${@:3}
+          gia "$feat:${message^}";;
+      *)  message=$@;gia "${feat}:${message^}";;
+  esac
+} 
+
+function gp(){
+  git push -u $1 $2
+}
+#repo , opens up current repository in your default browser
+function repo() {
+    local=$(git config --get remote.origin.url)
+    sensible-browser $local || open $local || xdg-open $local
+}
+
+# git add and commit
+function gia(){
+  git add . #comment this line if you dont want to add all files
+  git commit -m "${@}"
+  echo $@
+}
+
+# Set default for new terminal sessions, deleting any old value
+feat="Feat"
+set current feat
+function feat(){
+  feat=${1^}
+  echo  "Set feature: $feat"
+}
+# View current feature
+alias feat?='echo $feat'
+
+# Commit with beautiful messages with feature headings prepended
+function gim(){
+  local message=${@:2}
+  case $1 in
+    "a")  gia "Asset:${message^}" ;;
+    "x")  gia "Fix:${message^}" ;;
+    "d")  gia "Docs:${message^}" ;;
+    "s")  gia "Style:${message^}" ;;
+    "r")  gia "Refactor:${message^}" ;;
+    "t")  gia "Test:${message^}" ;;
+    "c")  gia "Config:${message^}" ;;
+    "i")  gia "Init:${message^}" ;;
+    "o")  local message=${@:3};gia "${2^}:${message^}";;
+    "M")  gia "Model:${message^}" ;;
+    "V")  gia "View:${message^}" ;;
+    "C")  gia "Controller:${message^}" ;;
+    "f")  feat $2;
+          message=${@:3}
+          gia "$feat:${message^}";;
+      *)  message=$@;gia "${feat}:${message^}";;
+  esac
+} 
+
+function gp(){
+  git push -u $1 $2
+}
+# rails routes with filter using grep,exg routes user
+function routes(){
+  rails routes | grep "$1"
+}
+# rails routes with filter using grep,exg routes user
+function routes(){
+  rails routes | grep "$1"
 }
