@@ -232,3 +232,8 @@ function gim(){
 function routes(){
   rails routes | grep "$1"
 }
+
+#function to search with filter
+function lg(){
+  ls | grep "$@"
+}
