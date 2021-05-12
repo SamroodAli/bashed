@@ -98,7 +98,7 @@ reload
 |cdbb|cdbb|cd back 2 times|
 |cdb|cdb 3|cd back custom times|
 |goto|goto node|go to where program is installed|
-
+|lg|lg microverse|searches for files and folders with given filter keyword, `ls` and `grep` combined|
 
 ### Git commands
 Use these only after you are familiar with git commands, highly recommend that you learn them, these commands should not stop you from learning proper git commands.
