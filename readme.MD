@@ -106,6 +106,7 @@ Use these only after you are familiar with git commands, highly recommend that y
 | Command |Example | What it does |
 | ------ | ------ | ------ |
 |repo|repo|Open current project repo in your browser|
+|pulls|pulls|Open current project pull requests link in your browser|
 |gia|gia hello world|git add all files and commit,message is everything after the `gia` keyword, no need for quotes to the message. |
 |gim|gim hello world|awesome automated git commit messages,look at this project commits, seperate documentation below |
 |gp|gp|`git push -u command`, although it takes in optional arguments and workds,exg: `gp origin development`, but `git push` would be faster with tab completion, I use it for pushing current branch with just `gp`|
