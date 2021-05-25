@@ -47,3 +47,9 @@ function gim(){
 function gp(){
   git push -u $1 $2
 }
+
+function pulls() {
+    repo=$(git config --get remote.origin.url)
+    pull=${repo%.*}/pulls
+    sensible-browser $local || open $local || xdg-open $local
+}

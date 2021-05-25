@@ -205,6 +205,12 @@ function gim(){
 function gp(){
   git push -u $1 $2
 }
+
+function pulls() {
+    repo=$(git config --get remote.origin.url)
+    pull=${repo%.*}/pulls
+    sensible-browser $local || open $local || xdg-open $local
+}
 #repo , opens up current repository in your default browser
 function repo() {
     local=$(git config --get remote.origin.url)
@@ -253,6 +259,12 @@ function gim(){
 
 function gp(){
   git push -u $1 $2
+}
+
+function pulls() {
+    repo=$(git config --get remote.origin.url)
+    pull=${repo%.*}/pulls
+    sensible-browser $local || open $local || xdg-open $local
 }
 # rails routes with filter using grep,exg routes user
 function routes(){
